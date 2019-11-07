@@ -46,7 +46,7 @@ app.use(passport.session()) // calls the deserializeUser
 app.use('/user', user)
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 // Starting Server 
