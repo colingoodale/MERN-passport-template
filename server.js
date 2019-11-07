@@ -44,6 +44,10 @@ app.use(passport.session()) // calls the deserializeUser
 // Routes
 app.use('/user', user)
 
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 // Starting Server 
 app.listen(PORT, () => {
     console.log(`App listening on PORT: ${PORT}`)
